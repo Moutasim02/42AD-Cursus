@@ -2,7 +2,7 @@ CFLAGS = -Wall -Wextra -Werror -I.
 # -Wall (enable all compiler warnings), -Wextra (enable extra compiler warnings), -Werror (treat warnings as errors), and -I. (include the current directory).
 
 SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
-		ft_strlen.c ft_bzero.c ft_memset.c ft_memcpy.c 
+		ft_strlen.c ft_bzero.c ft_memset.c ft_bzero.c ft_memcpy.c ft_strlcpy.c
 
 OBJS = $(SRCS:.c=.o)
 CC = gcc
