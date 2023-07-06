@@ -6,13 +6,14 @@
 /*   By: mel-ayou <mel-ayou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 17:51:18 by mel-ayou          #+#    #+#             */
-/*   Updated: 2023/07/04 18:18:08 by mel-ayou         ###   ########.fr       */
+/*   Updated: 2023/07/06 13:57:09 by mel-ayou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t			ft_strlcpy(char * dest, const char * src, size_t size){
+size_t			ft_strlcpy(char * dest, const char * src, size_t size)
+{
 	size_t	i;
 	size_t	j;
 

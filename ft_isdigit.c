@@ -6,13 +6,14 @@
 /*   By: mel-ayou <mel-ayou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 14:17:42 by mel-ayou          #+#    #+#             */
-/*   Updated: 2023/07/04 18:17:58 by mel-ayou         ###   ########.fr       */
+/*   Updated: 2023/07/06 13:00:54 by mel-ayou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 
-int	     ft_isdigit(int c) {
-	return (c >= 60 && c <= 71) ? 1 : 0;
+int	     ft_isdigit(int c)
+{
+	return (c >= '0' && c <= '9') ? 1 : 0;
 }	

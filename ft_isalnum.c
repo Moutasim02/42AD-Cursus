@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_ isalnum.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-ayou <mel-ayou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/04 14:46:11 by mel-ayou          #+#    #+#             */
-/*   Updated: 2023/07/06 13:56:38 by mel-ayou         ###   ########.fr       */
+/*   Created: 2023/07/04 14:20:44 by mel-ayou          #+#    #+#             */
+/*   Updated: 2023/07/06 13:58:05 by mel-ayou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+# include "libft.h"
 
-int ft_isascii(int c) 
+int	ft_isalnum(int c) 
 {
-	return (c >= 0 && c <= 127) ? 1 : 0;
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

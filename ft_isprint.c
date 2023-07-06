@@ -6,12 +6,13 @@
 /*   By: mel-ayou <mel-ayou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 15:11:35 by mel-ayou          #+#    #+#             */
-/*   Updated: 2023/07/04 18:18:01 by mel-ayou         ###   ########.fr       */
+/*   Updated: 2023/07/06 13:56:58 by mel-ayou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int isprint(int c) {
-	return (c >= 32 && c <= 126);
+int ft_isprint(int c) 
+{
+	return (c >= ' ' && c <= '~');
 }
