@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-ayou <mel-ayou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/06 15:31:51 by mel-ayou          #+#    #+#             */
-/*   Updated: 2023/07/06 16:36:21 by mel-ayou         ###   ########.fr       */
+/*   Created: 2023/07/08 18:34:05 by mel-ayou          #+#    #+#             */
+/*   Updated: 2023/07/08 18:35:20 by mel-ayou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
-void * ft_memcpy(void* dest, const void* src, size_t n) {
-	size_t i;
-	
-	if (!dest)
-		return (NULL);
-		
+char *			ft_strdup(const char *s1)
+{
+	char	*new_string;
+	int		i;
+
 	i = 0;
-	while (i < n)
-	{
-		*(unsigned char*) (dest + i) = *(unsigned char*) (src + i);
-		i++;
-	}
-	return dest;
+	new_string = (char *)malloc(sizeof(char) * ft_strlen(s1) + 1);
+	if (!new_string)
+		return (NULL);
+	while (*s1)
+		new_string[i++] = *s1++;
+	new_string[i] = '\0';
+	return (new_string);
 }
