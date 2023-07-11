@@ -6,18 +6,16 @@
 /*   By: mel-ayou <mel-ayou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 15:47:49 by mel-ayou          #+#    #+#             */
-/*   Updated: 2023/07/09 22:51:29 by mel-ayou         ###   ########.fr       */
+/*   Updated: 2023/07/11 16:16:44 by mel-ayou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void *			ft_memmove(void *dst, const void *src, size_t len) {
-	int i;
+	size_t i;
 	char *d;
 	const char *s;
-	
-	i = 0;
 	
 	if(len == 0)
 		return dst;
@@ -28,12 +26,18 @@ void *			ft_memmove(void *dst, const void *src, size_t len) {
     d = dst;
 	s = src;
 	
-    if (src > dst) 
-        for (size_t i = 0; i < len; i++)
-            d[i] = s[i];
-    else 
-        for (size_t i = len; i > 0; i--)
-            d[i - 1] = s[i - 1];
-    
+	i = 0;
+    if (src > dst){
+		while (i < len){
+			d[i] = s[i];
+			i++;
+		}
+	} else {
+        i = len;  
+		while (i > 0){
+			d[i - 1] = s[i - 1];
+			i--;
+		}
+	}
     return dst;
 }

@@ -1,2 +1,5 @@
 .DS_Store
 ./libft-unit-test
+libft/a.out
+.vscode/settings.json
+libft/libft.a

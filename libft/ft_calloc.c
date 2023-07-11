@@ -6,7 +6,7 @@
 /*   By: mel-ayou <mel-ayou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 20:29:08 by mel-ayou          #+#    #+#             */
-/*   Updated: 2023/07/09 21:18:39 by mel-ayou         ###   ########.fr       */
+/*   Updated: 2023/07/11 19:57:53 by mel-ayou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 void *		ft_calloc(size_t count, size_t size)
 {
 	void* ptr;
+
+   	if (size && count > SIZE_MAX / size)
+        return NULL;
 
 	ptr = malloc(count * size);
 	if (!ptr)
