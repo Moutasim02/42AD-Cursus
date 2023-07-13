@@ -34,11 +34,3 @@ char *ft_substr(char const *s, unsigned int start, size_t len) {
 
 	return substring;
 }
-
-// int main()
-// {
-// 	char* str = "My name is moutasim";
-// 	printf("The substring is: %s", 
-// 						ft_substr(str, 2, 5));
-// 	return 0;
-// }
