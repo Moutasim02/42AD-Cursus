@@ -6,40 +6,64 @@
 /*   By: moutasim <moutasim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 18:50:16 by mel-ayou          #+#    #+#             */
-/*   Updated: 2023/07/19 04:00:49 by moutasim         ###   ########.fr       */
+/*   Updated: 2023/07/19 13:52:40 by moutasim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
-// char **ft_split(char const *s, char c)
-// {
-// 	size_t i;
-// 	size_t j;
-// 	size_t len;
-// 	char** arr;
-// 	char* temp_str;
-	
-// 	i = 0;
-// 	j = 0;
-// 	temp_str = ft_strdup("");
-// 	arr = (char **)malloc(sizeof(char *));
-	
-// 	while (s[i])
-// 	{
-// 		if (s[i] != c)
-// 		{	
-// 			ft_strlcat(temp_str, s[i], 1);
-// 			i++;
-// 		} else {
-// 			len = ft_strlen(temp_str);
-// 			*arr[j] = (char*) malloc(sizeof(*temp_str) * (len) + 1);
-// 			ft_strlcpy(*arr[j], temp_str, sizeof(*arr[j]));
-// 			i++;
-// 			j++;
-// 			temp_str = NULL;
-// 			temp_str = ft_strdup("");
-// 		}
-// 	}
-// 	return arr;
-// }
+
+static int count_words(const char *str, char c) {
+    int wordCount = 0;
+    int isWordStart = 0;
+
+    while (*str) {
+        if (*str != c && !isWordStart) {
+            isWordStart = 1;
+            wordCount++;
+        } else if (*str == c) {
+            isWordStart = 0;
+        }
+        str++;
+    }
+
+    return wordCount;
+}
+
+static char *duplicate_word(const char *str, int startIndex, int endIndex) {
+    char *word;
+    int i = 0;
+
+    word = malloc((endIndex - startIndex + 1) * sizeof(char));
+    while (startIndex < endIndex)
+        word[i++] = str[startIndex++];
+    word[i] = '\0';
+
+    return word;
+}
+
+char **ft_split(const char *str, char c) {
+    size_t strLength = strlen(str);
+    size_t wordCount = count_words(str, c);
+    char **splitResult;
+
+    if (!str || !(splitResult = malloc((wordCount + 1) * sizeof(char *))))
+        return NULL;
+
+    size_t i = 0;
+    size_t splitIndex = 0;
+    int wordStartIndex = -1;
+
+    while (i <= strLength) {
+        if (str[i] != c && wordStartIndex < 0) {
+            wordStartIndex = i;
+        } else if ((str[i] == c || i == strLength) && wordStartIndex >= 0) {
+            splitResult[splitIndex++] = duplicate_word(str, wordStartIndex, i);
+            wordStartIndex = -1;
+        }
+        i++;
+    }
+
+    splitResult[splitIndex] = NULL;
+    return splitResult;
+}
