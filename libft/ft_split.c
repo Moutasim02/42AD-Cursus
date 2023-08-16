@@ -6,7 +6,7 @@
 /*   By: mel-ayou <mel-ayou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 18:50:16 by mel-ayou          #+#    #+#             */
-/*   Updated: 2023/08/16 20:53:07 by mel-ayou         ###   ########.fr       */
+/*   Updated: 2023/08/16 21:30:17 by mel-ayou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,19 +76,17 @@ char	**ft_split(char const *s, char c)
 	char			**tab;
 	char			*next_str;
 	unsigned int	next_str_len;
-	unsigned int	nb_strs;
 	unsigned int	i;
 
 	if (!s)
 		return (NULL);
-	nb_strs = get_strings_counter(s, c);
-	tab = (char **)malloc(sizeof(char *) * (nb_strs + 1));
+	tab = (char **)malloc(sizeof(char *) * (get_strings_counter(s, c) + 1));
 	if (!tab)
 		return (NULL);
 	i = 0;
 	next_str = (char *)s;
 	next_str_len = 0;
-	while (i < nb_strs)
+	while (i < get_strings_counter(s, c))
 	{
 		ft_get_next_str(&next_str, &next_str_len, c);
 		tab[i] = (char *)malloc(sizeof(char) * (next_str_len + 1));
