@@ -6,13 +6,13 @@
 /*   By: mel-ayou <mel-ayou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 18:34:05 by mel-ayou          #+#    #+#             */
-/*   Updated: 2023/07/08 18:35:20 by mel-ayou         ###   ########.fr       */
+/*   Updated: 2023/08/16 20:57:50 by mel-ayou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *			ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
 	char	*new_string;
 	int		i;

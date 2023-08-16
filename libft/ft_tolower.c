@@ -6,14 +6,13 @@
 /*   By: mel-ayou <mel-ayou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 17:53:34 by mel-ayou          #+#    #+#             */
-/*   Updated: 2023/07/08 17:56:30 by mel-ayou         ###   ########.fr       */
+/*   Updated: 2023/08/16 20:58:28 by mel-ayou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int
-	ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		c += 32;

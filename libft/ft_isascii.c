@@ -6,13 +6,15 @@
 /*   By: mel-ayou <mel-ayou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 14:46:11 by mel-ayou          #+#    #+#             */
-/*   Updated: 2023/07/06 13:56:38 by mel-ayou         ###   ########.fr       */
+/*   Updated: 2023/08/16 20:26:43 by mel-ayou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isascii(int c) 
+int	ft_isascii(int c)
 {
-	return (c >= 0 && c <= 127) ? 1 : 0;
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }

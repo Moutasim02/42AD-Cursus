@@ -4,3 +4,6 @@ libft/a.out
 .vscode/settings.json
 libft/libft.a
 libft/libft-tester-tokyo
+/CMakeLists.txt
+.idea
+cmake-build-debug

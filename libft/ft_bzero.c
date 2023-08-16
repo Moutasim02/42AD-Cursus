@@ -6,18 +6,19 @@
 /*   By: mel-ayou <mel-ayou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 16:56:39 by mel-ayou          #+#    #+#             */
-/*   Updated: 2023/07/04 18:17:47 by mel-ayou         ###   ########.fr       */
+/*   Updated: 2023/08/16 20:00:04 by mel-ayou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *p;
-	
+	unsigned char	*p;
+
 	p = s;
-	while (n) {
+	while (n)
+	{
 		*p++ = 0;
 		--n;
 	}

@@ -6,7 +6,7 @@
 /*   By: mel-ayou <mel-ayou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 14:12:32 by mel-ayou          #+#    #+#             */
-/*   Updated: 2023/08/16 19:30:16 by mel-ayou         ###   ########.fr       */
+/*   Updated: 2023/08/16 20:43:44 by mel-ayou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,19 @@
 
 long int	ft_absoulte_value(long int nbr)
 {
-	return ((nbr < 0) ? -nbr : nbr);
+	if (nbr < 0)
+		return (-nbr);
+	return (nbr);
 }
 
-int			ft_nbr_length(long int nbr)
+int	ft_nbr_length(long int nbr)
 {
-	int		len;
+	int	len;
 
-	len = (nbr <= 0) ? 1 : 0;
+	if (nbr <= 0)
+		len = 1;
+	else
+		len = 0;
 	while (nbr != 0)
 	{
 		nbr = nbr / 10;
@@ -30,13 +35,16 @@ int			ft_nbr_length(long int nbr)
 	return (len);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	int		len;
 	int		sign;
 	char	*c;
 
-	sign = (n < 0) ? -1 : 1;
+	if (n < 0)
+		sign = -1;
+	else
+		sign = 1;
 	len = ft_nbr_length(n);
 	c = (char *)malloc(sizeof(char) * len + 1);
 	if (c == NULL)

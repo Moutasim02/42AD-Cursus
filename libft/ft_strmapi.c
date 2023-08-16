@@ -6,13 +6,13 @@
 /*   By: mel-ayou <mel-ayou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/16 18:53:40 by mel-ayou          #+#    #+#             */
-/*   Updated: 2023/08/16 18:53:46 by mel-ayou         ###   ########.fr       */
+/*   Updated: 2023/08/16 20:58:12 by mel-ayou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char				*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*newstr;
 	unsigned int	len;
