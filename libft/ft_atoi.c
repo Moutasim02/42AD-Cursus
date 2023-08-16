@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: moutasim <moutasim@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mel-ayou <mel-ayou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/08 21:32:02 by mel-ayou          #+#    #+#             */
-/*   Updated: 2023/07/19 04:00:09 by moutasim         ###   ########.fr       */
+/*   Updated: 2023/08/16 19:37:57 by mel-ayou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
 
-int ft_atoi(const char *str)
+int		ft_atoi(const char *str)
 {
     int i = 0;
     int sign = 1;

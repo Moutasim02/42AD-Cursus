@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-ayou <mel-ayou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/04 15:11:35 by mel-ayou          #+#    #+#             */
-/*   Updated: 2023/08/16 19:33:58 by mel-ayou         ###   ########.fr       */
+/*   Created: 2023/08/16 19:20:07 by mel-ayou          #+#    #+#             */
+/*   Updated: 2023/08/16 19:25:41 by mel-ayou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c) 
+void	ft_putendl_fd(char *s, int fd)
 {
-	return (c >= ' ' && c <= '~');
+	if (!(s) || fd < 0)
+		return ;
+	write(fd, s, ft_strlen(s));
+	write(fd, "\n", 1);
 }
