@@ -7,3 +7,4 @@ libft/libft-tester-tokyo
 /CMakeLists.txt
 .idea
 cmake-build-debug
+.clang-format

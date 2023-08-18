@@ -6,7 +6,7 @@
 /*   By: mel-ayou <mel-ayou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/16 18:53:40 by mel-ayou          #+#    #+#             */
-/*   Updated: 2023/08/16 20:58:12 by mel-ayou         ###   ########.fr       */
+/*   Updated: 2023/08/18 17:21:20 by mel-ayou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (s == 0 || f == 0)
 		return (NULL);
 	len = ft_strlen(s);
-	if (!(newstr = (char *)malloc(sizeof(char) * (len + 1))))
+	newstr = (char *)malloc(sizeof(char) * (len + 1));
+	if (!newstr)
 		return (NULL);
 	i = 0;
 	while (s[i])
