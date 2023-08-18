@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.C                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-ayou <mel-ayou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/18 17:48:54 by mel-ayou          #+#    #+#             */
-/*   Updated: 2023/08/18 18:38:17 by mel-ayou         ###   ########.fr       */
+/*   Updated: 2023/08/18 22:25:57 by mel-ayou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list *new_list;
+	t_list	*new_list;
 
-	new_list = (t_list *) malloc(sizeof(content));
+	new_list = (t_list *)malloc(sizeof(t_list));
 	if (!new_list)
-		return (0);
-
+		return (NULL);
 	new_list->content = content;
 	new_list->next = NULL;
-		
-	return new_list;
+	return (new_list);
 }
