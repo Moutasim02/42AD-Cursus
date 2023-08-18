@@ -8,3 +8,4 @@ libft/libft-tester-tokyo
 .idea
 cmake-build-debug
 .clang-format
+.vscode
